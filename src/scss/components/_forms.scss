@@ -1,0 +1,40 @@
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}
+
+.input {
+  --input-b: #A9A9A9;
+
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 8px 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid;
+  color: var(--c-black);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-sm);
+  border-color: var(--input-b);
+  transition: color .3s ease-in-out, border-color .3s ease-in-out;
+
+  &--valid {
+    --input-b: var(--c-green);
+  }
+
+  &--invalid {
+    --input-b: var(--c-red);
+  }
+
+  &-disclaimer {
+    color: #959595;
+  }
+
+  @include placeholder {
+    color: #959595;
+  }
+}

@@ -1,0 +1,48 @@
+$font-primary: "Roboto", sans-serif;
+$font-secondary: "Bebas Neue", sans-serif;
+
+html,
+body {
+  font-family: $font-primary;
+}
+
+:root {
+  --fs-h-xl: 80px;
+  --fs-h-1: 36px;
+  --fs-h-2: 30px;
+  --fs-h-3: 24px;
+
+  --lh-h-xl: 90px;
+  --lh-h-1: 42px;
+  --lh-h-2: 38px;
+  --lh-h-3: 30px;
+
+  --fs-lg: 20px;
+  --fs-md: 16px;
+  --fs-sm: 14px;
+  --fs-xs: 12px;
+
+  --lh-lg: 24px;
+  --lh-md: 24px;
+  --lh-sm: 20px;
+  --lh-xs: 14px;
+
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  @media all and (max-width: $mediaSM) {
+    --fs-h-xl: 42px;
+    --fs-h-1: 28px;
+
+    --lh-h-xl: 48px;
+    --lh-h-1: 36px;
+  }
+
+  @media all and (max-width: $mediaXS) {
+    --fs-h-xl: 36px;
+    --lh-h-xl: 48px;
+  }
+}

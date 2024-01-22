@@ -1,0 +1,16 @@
+:root {
+  --header-h: 114px;
+  --logo-w: 140px;
+
+  @media all and (max-width: $mediaSM) {
+    --header-h: 94px;
+  }
+}
+
+.header {
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: var(--header-h);
+  background: #000;
+
+}

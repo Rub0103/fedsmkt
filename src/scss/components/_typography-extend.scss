@@ -1,0 +1,194 @@
+:root {
+  --icon-w: 24px;
+}
+
+.font-primary {
+  font-family: $font-primary;
+}
+
+.font-secondary {
+  font-family: $font-secondary;
+  font-weight: 400!important;
+}
+
+@mixin makeTypography($mediaquery: "") {
+  .#{$mediaquery}fs-h-xl {
+    font-size: var(--fs-h-xl);
+    letter-spacing: -1.6px;
+  }
+
+  .#{$mediaquery}fs-h-1 {
+    font-size: var(--fs-h-1);
+  }
+
+  .#{$mediaquery}fs-h-2 {
+    font-size: var(--fs-h-2);
+  }
+
+  .#{$mediaquery}fs-h-3 {
+    font-size: var(--fs-h-3);
+  }
+
+  .#{$mediaquery}fs-lg {
+    font-size: var(--fs-lg);
+  }
+
+  .#{$mediaquery}fs-md {
+    font-size: var(--fs-md);
+  }
+
+  .#{$mediaquery}fs-sm {
+    font-size: var(--fs-sm);
+  }
+
+  .#{$mediaquery}fs-xs {
+    font-size: var(--fs-xs);
+  }
+
+  .#{$mediaquery}lh-h-xl {
+    line-height: var(--lh-h-xl);
+  }
+
+  .#{$mediaquery}lh-h-1 {
+    line-height: var(--lh-h-1);
+  }
+
+  .#{$mediaquery}lh-h-2 {
+    line-height: var(--lh-h-2);
+  }
+
+  .#{$mediaquery}lh-h-3 {
+    line-height: var(--lh-h-3);
+  }
+
+  .#{$mediaquery}lh-lg {
+    line-height: var(--lh-lg);
+  }
+
+  .#{$mediaquery}lh-md {
+    line-height: var(--lh-md);
+  }
+
+  .#{$mediaquery}lh-sm {
+    line-height: var(--lh-sm);
+  }
+
+  .#{$mediaquery}lh-xs {
+    line-height: var(--lh-xs);
+  }
+
+  .#{$mediaquery}lh-1 {
+    line-height: 1;
+  }
+
+  .#{$mediaquery}ls-0 {
+    letter-spacing: 0;
+  }
+
+  .#{$mediaquery}ls-1 {
+    letter-spacing: 1px;
+  }
+
+  .#{$mediaquery}decoration-none {
+    text-decoration: none;
+  }
+
+  .#{$mediaquery}underline {
+    text-decoration: underline;
+  }
+
+  .#{$mediaquery}text-italic {
+    font-style: italic;
+  }
+
+  .#{$mediaquery}text-left,
+  .#{$mediaquery}ql-align-left {
+    text-align: left;
+  }
+
+  .#{$mediaquery}text-center,
+  .#{$mediaquery}ql-align-center {
+    text-align: center;
+  }
+
+  .#{$mediaquery}text-justify,
+  .#{$mediaquery}ql-align-justify {
+    text-align: justify;
+  }
+
+  .#{$mediaquery}text-right,
+  .#{$mediaquery}ql-align-right {
+    text-align: right;
+  }
+
+  .#{$mediaquery}text-uppercase {
+    text-transform: uppercase;
+  }
+
+  .#{$mediaquery}text-overflow {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: unset;
+  }
+
+  .#{$mediaquery}text-nowrap {
+    white-space: nowrap;
+  }
+
+  .#{$mediaquery}list {
+    list-style-position: inside;
+  }
+
+  .#{$mediaquery}fw-300 {
+    font-weight: var(--fw-400);
+  }
+
+  .#{$mediaquery}fw-400 {
+    font-weight: var(--fw-400);
+  }
+
+  .#{$mediaquery}fw-500 {
+    font-weight: var(--fw-500);
+  }
+
+  .#{$mediaquery}fw-600 {
+    font-weight: var(--fw-500);
+  }
+
+  .#{$mediaquery}fw-700 {
+    font-weight: var(--fw-700);
+  }
+
+  .#{$mediaquery}icon {
+    &--32 {
+      --icon-w: 32px;
+    }
+
+    &--48 {
+      --icon-w: 48px;
+    }
+
+    &--54 {
+      --icon-w: 54px;
+    }
+
+    &--72 {
+      --icon-w: 72px;
+    }
+
+    &--100 {
+      --icon-w: 100px;
+    }
+  }
+}
+
+@include makeTypography();
+
+@media all and (max-width: $mediaSM) {
+  @include makeTypography(sm-);
+}
+
+@media all and (max-width: $mediaXS) {
+  @include makeTypography(xs-);
+}

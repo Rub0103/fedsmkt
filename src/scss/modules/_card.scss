@@ -1,0 +1,169 @@
+.card {
+  $self: &;
+  background: #0B0819;
+  border-radius: 10px;
+  backdrop-filter: blur(45px);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  &_wrap {
+    &_container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  &_grid {
+    width: 100%;
+    max-width: 1014px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &_title {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 190px;
+    min-height: 60px;
+  }
+
+  &_text {
+    max-width: 405px;
+  }
+
+  &_icon {
+    display: block;
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    width: var(--card-icon-w);
+    z-index: 1;
+    height: auto;
+    //pointer-events: none;
+  }
+
+  @media all and (min-width: $mediaSM) {
+    &_grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 20px 20px;
+      grid-template-areas:
+      "card-1 card-2 card-2"
+      "card-1 card-3 card-4";
+    }
+
+    &-1 {
+      --card-icon-w: 100px;
+      grid-area: card-1;
+
+      #{$self}_icon {
+        top: unset;
+        right: unset;
+        bottom: 28px;
+        left: 42px;
+      }
+    }
+
+    &-2 {
+      --card-icon-w: 98px;
+      grid-area: card-2;
+    }
+
+    &-3 {
+      --card-icon-w: 72px;
+      grid-area: card-3;
+    }
+
+    &-4 {
+      --card-icon-w: 48px;
+      grid-area: card-4;
+    }
+  }
+
+  @media all and (max-width: $mediaSM) {
+    max-width: 530px;
+
+    &_icon {
+      bottom: unset !important;
+      left: unset !important;
+    }
+
+    &_text {
+      max-width: 305px;
+    }
+
+    &-1 {
+      --card-icon-w: 42px;
+
+      #{$self}_icon {
+        right: 44px;
+      }
+    }
+
+    &-2 {
+      --card-icon-w: 92px;
+
+      #{$self}_icon {
+        right: 26px;
+      }
+    }
+
+    &-3 {
+      --card-icon-w: 88px;
+
+      #{$self}_icon {
+        right: 28px;
+      }
+    }
+
+    &-4 {
+      --card-icon-w: 60px;
+
+      #{$self}_icon {
+        right: 38px;
+      }
+    }
+  }
+
+  @media all and (max-width: $mediaXS) {
+    &_icon {
+      top: 18px;
+    }
+
+    &-1 {
+      --card-icon-w: 26px;
+
+      #{$self}_icon {
+        right: 28px;
+      }
+    }
+
+    &-2 {
+      --card-icon-w: 60px;
+
+      #{$self}_icon {
+        right: 18px;
+      }
+    }
+
+    &-3 {
+      --card-icon-w: 56px;
+
+      #{$self}_icon {
+        right: 18px;
+      }
+    }
+
+    &-4 {
+      --card-icon-w: 38px;
+
+      #{$self}_icon {
+        right: 24px;
+      }
+    }
+  }
+}

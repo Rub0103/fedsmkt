@@ -1,0 +1,182 @@
+.c-inherit {
+	color: inherit;
+}
+
+.c-primary {
+	color: var(--c-primary);
+}
+
+.c-black {
+	color: var(--c-black);
+}
+
+.c-white {
+	color: var(--c-white);
+}
+
+.c-white-15 {
+	color: rgba(var(--c-white-rgb), 0.15);
+}
+
+.c-white-light {
+	color: var(--c-white-light);
+}
+
+.c-white-dark {
+	color: var(--c-white-dark);
+}
+
+.c-grey {
+	color: var(--c-grey);
+}
+
+.c-grey-light {
+	color: var(--c-grey-light);
+}
+
+.c-grey-dark {
+	color: var(--c-grey-dark);
+}
+
+.c-green {
+	color: var(--c-green);
+}
+
+.c-green-light {
+	color: var(--c-green-light);
+}
+
+.c-red {
+	color: var(--c-red);
+}
+
+.c-red-light {
+	color: var(--c-red-light);
+}
+
+.c-yellow {
+	color: var(--c-yellow);
+}
+
+.c-yellow-light {
+	color: var(--c-yellow-light);
+}
+
+.c-text-dark {
+	color: var(--c-text-dark);
+}
+
+// bg
+
+.bg-primary {
+	background-color: var(--c-primary);
+}
+
+.bg-black {
+	background-color: var(--c-black);
+}
+
+.bg-white {
+	background-color: var(--c-white);
+}
+
+.bg-white-dark {
+	background-color: var(--c-white-dark);
+}
+
+.bg-grey {
+	background-color: var(--c-grey);
+}
+
+.bg-grey-light {
+	background-color: var(--c-grey-light);
+}
+
+.bg-grey-dark {
+	background-color: var(--c-grey-dark);
+}
+
+.bg-green {
+	background-color: var(--c-green);
+}
+
+.bg-green-light {
+	background-color: var(--c-green-light);
+}
+.bg-green-lighter {
+	background-color: var(--c-green-lighter);
+}
+
+.bg-red {
+	background-color: var(--c-red);
+}
+
+.bg-red-light {
+	background-color: var(--c-red-light);
+}
+
+.bg-yellow {
+	background-color: var(--c-yellow);
+}
+
+.bg-yellow-light {
+	background-color: var(--c-yellow-light);
+}
+
+.bg-text-dark {
+	background-color: var(--c-text-dark);
+}
+
+// border
+
+.border-primary {
+	border-color: var(--c-primary);
+}
+
+.border-black {
+	border-color: var(--c-black);
+}
+
+.border-white {
+	border-color: var(--c-white);
+}
+
+.border-grey {
+	border-color: var(--c-grey);
+}
+
+.border-grey-light {
+	border-color: var(--c-grey-light);
+}
+
+.border-grey-dark {
+	border-color: var(--c-grey-dark);
+}
+
+.border-green {
+	border-color: var(--c-green);
+}
+
+.border-green-light {
+	border-color: var(--c-green-light);
+}
+
+.border-red {
+	border-color: var(--c-red);
+}
+
+.border-red-light {
+	border-color: var(--c-red-light);
+}
+
+.border-yellow {
+	border-color: var(--c-yellow);
+}
+
+.border-yellow-light {
+	border-color: var(--c-yellow-light);
+}
+
+.border-text-dark {
+	border-color: var(--c-text-dark);
+}

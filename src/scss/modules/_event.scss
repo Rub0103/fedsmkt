@@ -1,0 +1,9 @@
+.event {
+  &_wrap {
+    padding: 70px 0;
+  }
+
+  @media all and (max-width: $mediaXS) {
+    padding: 55px 0;
+  }
+}

@@ -1,0 +1,432 @@
+@mixin makeLayout($mediaquery: "") {
+  .#{$mediaquery}hidden {
+    display: none;
+  }
+
+  .#{$mediaquery}block {
+    display: block;
+  }
+
+  .#{$mediaquery}grid {
+    display: grid;
+  }
+
+  .#{$mediaquery}flex {
+    display: flex;
+
+    &-col {
+      flex-direction: column;
+
+      &-reverse {
+        flex-direction: column-reverse;
+      }
+    }
+
+    &-row {
+      flex-direction: row;
+
+      &-reverse {
+        flex-direction: row-reverse;
+      }
+    }
+
+    &-wrap {
+      flex-wrap: wrap;
+    }
+
+    &-nowrap {
+      flex-wrap: nowrap;
+    }
+  }
+
+  .#{$mediaquery}justify-start {
+    justify-content: flex-start;
+  }
+
+  .#{$mediaquery}justify-center {
+    justify-content: center;
+  }
+
+  .#{$mediaquery}justify-end {
+    justify-content: flex-end;
+  }
+
+  .#{$mediaquery}justify-stretch {
+    justify-content: stretch;
+  }
+
+  .#{$mediaquery}justify-between {
+    justify-content: space-between;
+  }
+
+  .#{$mediaquery}justify-around {
+    justify-content: space-around;
+  }
+
+  .#{$mediaquery}justify-evenly {
+    justify-content: space-evenly;
+  }
+
+  .#{$mediaquery}align-start {
+    align-items: flex-start;
+  }
+
+  .#{$mediaquery}align-center {
+    align-items: center;
+  }
+
+  .#{$mediaquery}align-end {
+    align-items: flex-end;
+  }
+
+  .#{$mediaquery}align-stretch {
+    align-items: stretch;
+  }
+
+  .#{$mediaquery}grow-0 {
+    flex-grow: 0;
+  }
+
+  .#{$mediaquery}grow-1 {
+    flex-grow: 1;
+  }
+
+  .#{$mediaquery}shrink-0 {
+    flex-shrink: 0;
+  }
+
+  .#{$mediaquery}shrink-1 {
+    flex-shrink: 1;
+  }
+
+  .#{$mediaquery}my-0 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .#{$mediaquery}mt-0 {
+    margin-top: 0;
+  }
+
+  .#{$mediaquery}mb-0 {
+    margin-bottom: 0;
+  }
+
+  .#{$mediaquery}mx-0 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .#{$mediaquery}mt-auto {
+    margin-top: auto;
+  }
+
+  .#{$mediaquery}ml-auto {
+    margin-left: auto;
+  }
+
+  .#{$mediaquery}mr-auto {
+    margin-right: auto;
+  }
+
+  .#{$mediaquery}mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .#{$mediaquery}mb-auto {
+    margin-bottom: auto;
+  }
+
+  .#{$mediaquery}ml-0 {
+    margin-left: 0;
+  }
+
+  .#{$mediaquery}mr-0 {
+    margin-right: 0;
+  }
+
+  .#{$mediaquery}py-0 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .#{$mediaquery}pt-0 {
+    padding-top: 0;
+  }
+
+  .#{$mediaquery}pb-0 {
+    padding-bottom: 0;
+  }
+
+  .#{$mediaquery}px-0 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .#{$mediaquery}pl-0 {
+    padding-left: 0;
+  }
+
+  .#{$mediaquery}pr-0 {
+    padding-right: 0;
+  }
+
+  .#{$mediaquery}b-0 {
+    border: 0;
+  }
+
+  .#{$mediaquery}col-gap-0 {
+    column-gap: 0;
+    grid-column-gap: 0;
+  }
+
+  .#{$mediaquery}row-gap-0 {
+    row-gap: 0;
+    grid-row-gap: 0;
+  }
+
+  @for $i from 1 through 20 {
+    $step: 4px;
+
+    .#{$mediaquery}my-#{$i} {
+      margin-top: $i * $step;
+      margin-bottom: $i * $step;
+    }
+
+    .#{$mediaquery}my-neg-#{$i} {
+      margin-top: -$i * $step;
+      margin-bottom: -$i * $step;
+    }
+
+    .#{$mediaquery}mt-#{$i} {
+      margin-top: $i * $step;
+    }
+
+    .#{$mediaquery}mt-neg-#{$i} {
+      margin-top: -$i * $step;
+    }
+
+    .#{$mediaquery}mb-#{$i} {
+      margin-bottom: $i * $step;
+    }
+
+    .#{$mediaquery}mb-neg-#{$i} {
+      margin-bottom: -$i * $step;
+    }
+
+    .#{$mediaquery}mx-#{$i} {
+      margin-left: $i * $step;
+      margin-right: $i * $step;
+    }
+
+    .#{$mediaquery}mx-neg-#{$i} {
+      margin-left: -$i * $step;
+      margin-right: -$i * $step;
+    }
+
+    .#{$mediaquery}ml-#{$i} {
+      margin-left: $i * $step;
+    }
+
+    .#{$mediaquery}ml-neg-#{$i} {
+      margin-left: -$i * $step;
+    }
+
+    .#{$mediaquery}mr-#{$i} {
+      margin-right: $i * $step;
+    }
+
+    .#{$mediaquery}mr-neg-#{$i} {
+      margin-right: -$i * $step;
+    }
+
+    .#{$mediaquery}py-#{$i} {
+      padding-top: $i * $step;
+      padding-bottom: $i * $step;
+    }
+
+    .#{$mediaquery}pt-#{$i} {
+      padding-top: $i * $step;
+    }
+
+    .#{$mediaquery}pb-#{$i} {
+      padding-bottom: $i * $step;
+    }
+
+    .#{$mediaquery}px-#{$i} {
+      padding-left: $i * $step;
+      padding-right: $i * $step;
+    }
+
+    .#{$mediaquery}pl-#{$i} {
+      padding-left: $i * $step;
+    }
+
+    .#{$mediaquery}pr-#{$i} {
+      padding-right: $i * $step;
+    }
+
+    .#{$mediaquery}col-gap-#{$i} {
+      column-gap: $i * $step;
+      grid-column-gap: $i * $step;
+    }
+
+    .#{$mediaquery}row-gap-#{$i} {
+      row-gap: $i * $step;
+      grid-row-gap: $i * $step;
+    }
+  }
+
+  .#{$mediaquery}relative {
+    position: relative;
+  }
+
+  .#{$mediaquery}sticky {
+    position: sticky;
+  }
+
+  .#{$mediaquery}absolute {
+    position: absolute;
+  }
+
+  .#{$mediaquery}top-0 {
+    top: 0;
+  }
+
+  .#{$mediaquery}right-0 {
+    right: 0;
+  }
+
+  .#{$mediaquery}bottom-0 {
+    bottom: 0;
+  }
+
+  .#{$mediaquery}left-0 {
+    left: 0;
+  }
+
+  .#{$mediaquery}z-1 {
+    z-index: 1;
+  }
+
+  .#{$mediaquery}border-0 {
+    border: none;
+  }
+
+  .#{$mediaquery}w-25 {
+    width: 25%;
+  }
+
+  .#{$mediaquery}w-33 {
+    width: calc(100% / 3);
+  }
+
+  .#{$mediaquery}w-50 {
+    width: 50%;
+  }
+
+  .#{$mediaquery}w-66 {
+    width: calc(100% - 100% / 3);
+  }
+
+  .#{$mediaquery}w-75 {
+    width: 75%;
+  }
+
+  .#{$mediaquery}w-100 {
+    width: 100%;
+  }
+
+  .#{$mediaquery}w-auto {
+    width: auto;
+
+    &.btn {
+      min-width: unset;
+    }
+  }
+
+  .#{$mediaquery}h-100 {
+    height: 100%;
+  }
+
+  .#{$mediaquery}h-auto {
+    height: auto;
+  }
+
+  .#{$mediaquery}pointer-none {
+    pointer-events: none;
+  }
+
+  .#{$mediaquery}pointer-auto {
+    pointer-events: auto;
+  }
+
+  .#{$mediaquery}pointer {
+    cursor: pointer;
+  }
+
+  .#{$mediaquery}no-scroll {
+    overflow: hidden !important;
+  }
+
+  .#{$mediaquery}scroll {
+    overflow: unset !important;
+  }
+
+  .#{$mediaquery}overflow-x {
+    overflow-x: auto !important;
+  }
+
+  .#{$mediaquery}overflow-y {
+    overflow-y: auto !important;
+  }
+}
+
+@include makeLayout();
+
+@media all and (max-width: $mediaSM) {
+  @include makeLayout(sm-);
+}
+
+@media all and (max-width: $mediaXS) {
+  @include makeLayout(xs-);
+}
+
+.svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+  &--logo {
+    width: var(--logo-w);
+  }
+
+  &--full {
+    width: 100%;
+  }
+
+  &--fill {
+    width: 100%;
+    height: 100%;
+  }
+
+  &--square {
+    height: unset;
+    aspect-ratio: 1;
+  }
+
+  &--contain {
+    object-fit: contain;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

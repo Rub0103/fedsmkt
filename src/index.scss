@@ -1,0 +1,11 @@
+$mediaSM: 1220px;
+$mediaXS: 767px;
+
+@import "scss/reset";
+
+@import "scss/components";
+@import "scss/modules";
+
+@import "scss/components/color-classes";
+@import "scss/components/typography-extend";
+@import "scss/components/layout-extend";

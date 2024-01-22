@@ -1,0 +1,62 @@
+.btn-reset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.btn {
+  $self: &;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  min-width: 140px;
+  height: 40px;
+  padding: 0 20px;
+  outline: none;
+  color: var(--c-white);
+  background-color: var(--c-green);
+  border: none;
+  border-radius: 0;
+  font-size: 24px;
+  line-height: 1;
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: all .3s ease-in-out;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+
+  }
+
+  &:disabled {
+    pointer-events: none;
+    background: var(--c-grey);
+  }
+
+  &--wide {
+    width: 100%;
+    max-width: 345px;
+  }
+
+  &.w-100,
+  &.sm-w-100,
+  &.xs-w-100 {
+    max-width: 100%;
+  }
+}

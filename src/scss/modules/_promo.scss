@@ -1,0 +1,43 @@
+.promo {
+  &_wrap {
+    padding: 90px 0;
+  }
+
+  &_list {
+    background-image: url(/src/assets/images/promo-bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &_item {
+      max-width: 246px;
+
+      &_icon {
+        width: auto;
+        height: 56px;
+      }
+    }
+  }
+
+  @media all and (max-width: $mediaSM) {
+    &_wrap {
+      padding: 56px 0 76px 0;
+
+      &_container {
+        max-width: 596px;
+      }
+    }
+  }
+
+  @media all and (max-width: $mediaXS) {
+    &_wrap {
+      &_container {
+        padding-left: 38px;
+        padding-right: 38px;
+      }
+    }
+
+    &_list {
+      background-image: none;
+    }
+  }
+}

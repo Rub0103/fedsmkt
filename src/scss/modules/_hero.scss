@@ -1,0 +1,19 @@
+.hero {
+  min-height: 617px;
+
+  &_container {
+
+  }
+
+  @media all and (max-width: $mediaSM) {
+    min-height: 500px;
+
+    &_container {
+      max-width: 520px;
+    }
+  }
+
+  @media all and (max-width: $mediaXS) {
+
+  }
+}
